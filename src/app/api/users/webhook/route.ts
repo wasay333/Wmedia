@@ -63,6 +63,9 @@ export async function POST(req: Request) {
   }
   if (eventType === "user.updated") {
     const { data } = evt;
+    if (!data.id) {
+      return new Response("Missing user id", { status: 400 });
+    }
     await db
       .update(users)
       .set({

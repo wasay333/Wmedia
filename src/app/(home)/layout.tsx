@@ -3,6 +3,7 @@ import React from "react";
 interface HomeProps {
   children: React.ReactNode;
 }
+
 const HomeLayout = ({ children }: HomeProps) => {
   return <ImportedHomeLayout>{children}</ImportedHomeLayout>;
 };

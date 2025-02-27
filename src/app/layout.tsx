@@ -9,6 +9,7 @@ import {
   // UserButton,
 } from "@clerk/nextjs";
 import { TRPCProvider } from "@/trpc/client";
+import { Toaster } from "@/components/ui/sonner";
 const inter = Inter({
   subsets: ["latin"],
 });
@@ -33,7 +34,10 @@ export default function RootLayout({
           <SignedIn>
             <UserButton />
           </SignedIn> */}
-          <TRPCProvider>{children}</TRPCProvider>
+          <TRPCProvider>
+            <Toaster />
+            {children}
+          </TRPCProvider>
         </body>
       </html>
     </ClerkProvider>

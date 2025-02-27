@@ -10,11 +10,13 @@ export const HomeNavbar = () => {
         {/* Menu and logo */}
         <div className="flex items-center flex-shrink-0 gap-3">
           <SidebarTrigger />
-          <Link href={"/"} className="flex items-center">
-            <Image src={"/logo.svg"} height={36} width={36} alt="logo" />
-            <p className="logo-text text-2xl font-medium tracking-tight leading-none relative top-1">
-              media
-            </p>
+          <Link prefetch href={"/"} className="hidden md:block">
+            <div className="p-4 flex items-center gap-1">
+              <Image src={"/logo.svg"} height={36} width={36} alt="logo" />
+              <p className="logo-text text-2xl font-medium tracking-tight leading-none relative top-1">
+                media
+              </p>
+            </div>
           </Link>
         </div>
         {/* Search bar */}

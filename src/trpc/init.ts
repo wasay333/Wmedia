@@ -6,6 +6,7 @@ import { initTRPC, TRPCError } from "@trpc/server";
 import { eq } from "drizzle-orm";
 import { cache } from "react";
 import superjson from "superjson";
+//creating and trpcContext
 export const createTRPCContext = cache(async () => {
   const { userId } = await auth();
   console.log("TRPC Context Clerk User ID:", userId);
@@ -13,13 +14,13 @@ export const createTRPCContext = cache(async () => {
 });
 
 export type Context = Awaited<ReturnType<typeof createTRPCContext>>;
-
+//creating a trpc instance
 const t = initTRPC.context<Context>().create({
   transformer: superjson,
 });
-export const createTRPCRouter = t.router;
+export const createTRPCRouter = t.router; // same as function in api endpoint like queries and mutation
 export const createCallerFactory = t.createCallerFactory;
-export const baseProcedure = t.procedure;
+export const BaseProcedure = t.procedure; //procedures are same as api endpoint
 export const ProtectedProcedure = t.procedure.use(async function isAuthed(
   opts
 ) {

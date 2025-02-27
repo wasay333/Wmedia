@@ -1,0 +1,16 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1280" height="720" fill="#F8F9FA"/>
+    
+    <!-- Icon: Broken Link (Not Found) -->
+    <g transform="translate(540, 180)">
+        <circle cx="100" cy="100" r="100" fill="#FF5733"/>
+        <path d="M85 85 L115 115 M115 85 L85 115" stroke="white" stroke-width="10" stroke-linecap="round"/>
+    </g>
+
+    
+    <!-- Search Icon -->
+    <g transform="translate(560, 400)">
+        <circle cx="80" cy="80" r="50" fill="#3498DB"/>
+        <line x1="110" y1="110" x2="140" y2="140" stroke="white" stroke-width="10" stroke-linecap="round"/>
+    </g>
+</svg>
