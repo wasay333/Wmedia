@@ -51,7 +51,7 @@ export const MainSection = () => {
                     e.preventDefault();
                     return clerk.openSignIn();
                   }
-                }} // do something on click
+                }}
               >
                 <Link
                   prefetch

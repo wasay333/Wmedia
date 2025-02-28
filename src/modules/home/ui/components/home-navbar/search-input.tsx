@@ -37,6 +37,7 @@ export const SearchInputSuspense = () => {
     <form className="flex w-full max-w-[600px]" onSubmit={handleSearch}>
       <div className="relative w-full">
         <input
+          value={value}
           onChange={(e) => setValue(e.target.value)}
           type="text"
           placeholder="Search"

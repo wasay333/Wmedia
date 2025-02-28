@@ -22,7 +22,6 @@ function getQueryClient() {
 function getUrl() {
   const base = (() => {
     if (typeof window !== "undefined") return "";
-    //Crucial to modify in .env to production domain (including protocol)
     return APP_URL;
   })();
   return `${base}/api/trpc`;
@@ -37,7 +36,7 @@ export function TRPCProvider(
     trpc.createClient({
       links: [
         httpBatchLink({
-          transformer: superjson, //<-- if you use a data transformer
+          transformer: superjson,
           url: getUrl(),
           async headers() {
             const headers = new Headers();

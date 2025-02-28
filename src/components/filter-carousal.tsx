@@ -36,7 +36,9 @@ export const FilterCarousal = ({
       return;
     }
     setCount(api.scrollSnapList().length);
+    //this is for the initail
     setCurrent(api.selectedScrollSnap() + 1);
+    //this is for contineuosly setting afterward
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
