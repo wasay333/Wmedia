@@ -36,7 +36,7 @@ export const InfiniteScroll = ({
       {hasNextPage ? (
         <Button
           variant={"secondary"}
-          disabled={!hasNextPage || isFetchingNextPage}
+          disabled={isFetchingNextPage}
           onClick={() => fetchNextPage()}
         >
           {isFetchingNextPage ? "loading..." : "Load more"}

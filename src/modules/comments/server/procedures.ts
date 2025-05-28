@@ -115,12 +115,7 @@ export const commentsRouter = createTRPCRouter({
           count: count(),
         })
         .from(comments)
-        .where(
-          and(
-            eq(comments.videoId, videoId)
-            //  isNull(comments.parentId)
-          )
-        ),
+        .where(and(eq(comments.videoId, videoId))),
 
       db
         .with(viewerReactions, replies)

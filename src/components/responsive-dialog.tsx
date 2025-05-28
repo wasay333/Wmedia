@@ -4,14 +4,14 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
 
 interface ResposiveModalProps {
   children: React.ReactNode;
-  open: boolean;
   title: string;
+  open: boolean;
   onOpenChange: (open: boolean) => void;
 }
 export const ResponsiveModal = ({
   children,
-  open,
   title,
+  open,
   onOpenChange,
 }: ResposiveModalProps) => {
   const isMobile = useIsMobile();

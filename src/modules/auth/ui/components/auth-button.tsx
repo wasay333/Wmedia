@@ -1,6 +1,11 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { ClapperboardIcon, UserCircleIcon, UserIcon } from "lucide-react";
+import {
+  BellIcon,
+  ClapperboardIcon,
+  UserCircleIcon,
+  UserIcon,
+} from "lucide-react";
 import { UserButton, SignInButton, SignedOut, SignedIn } from "@clerk/nextjs";
 import React from "react";
 
@@ -8,23 +13,30 @@ export const AuthButton = () => {
   //   add defferent auth states
   return (
     <>
-      <SignedIn>
-        <UserButton>
-          <UserButton.MenuItems>
-            <UserButton.Link
-              label="My Profile"
-              href="/users/curent"
-              labelIcon={<UserIcon className="size-4" />}
-            />
-            <UserButton.Link
-              label="Studio"
-              href="/studio"
-              labelIcon={<ClapperboardIcon className="size-4" />}
-            />
-            <UserButton.Action label="manageAccount" />
-          </UserButton.MenuItems>
-        </UserButton>
-      </SignedIn>
+      <div className="bg-background">
+        <SignedIn>
+          <UserButton>
+            <UserButton.MenuItems>
+              <UserButton.Link
+                label="My Profile"
+                href="/users/current"
+                labelIcon={<UserIcon className="size-4" />}
+              />
+              <UserButton.Link
+                label="Studio"
+                href="/studio"
+                labelIcon={<ClapperboardIcon className="size-4" />}
+              />
+              <UserButton.Link
+                label="Notification settings"
+                href="/Notification"
+                labelIcon={<BellIcon className="size-4" />}
+              />
+              <UserButton.Action label="manageAccount" />
+            </UserButton.MenuItems>
+          </UserButton>
+        </SignedIn>
+      </div>
       <SignedOut>
         <SignInButton mode="modal">
           <Button

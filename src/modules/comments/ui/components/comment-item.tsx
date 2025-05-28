@@ -111,7 +111,8 @@ export const CommentItem = ({
               >
                 <ThumbsUpIcon
                   className={cn(
-                    comment.viewerReaction === "like" && "fill-black"
+                    comment.viewerReaction === "like" &&
+                      "fill-black dark:fill-white"
                   )}
                 />
               </Button>
@@ -128,7 +129,8 @@ export const CommentItem = ({
               >
                 <ThumbsDownIcon
                   className={cn(
-                    comment.viewerReaction === "dislike" && "fill-black"
+                    comment.viewerReaction === "dislike" &&
+                      "fill-black dark:fill-white"
                   )}
                 />
               </Button>

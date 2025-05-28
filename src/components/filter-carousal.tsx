@@ -49,7 +49,7 @@ export const FilterCarousal = ({
       {/* left fade */}
       <div
         className={cn(
-          "absolute left-12 top-0 bottom-0 w-12 z-10 bg-gradient-to-r from-white to-transparent pointer-events-none",
+          "absolute left-12 top-0 bottom-0 w-12 z-10 bg-gradient-to-r  from-background to-transparent pointer-events-none",
           current === 1 && "hidden"
         )}
       />
@@ -69,7 +69,12 @@ export const FilterCarousal = ({
             >
               <Badge
                 variant={!value ? "default" : "secondary"}
-                className="rounded-lg cursor-pointer whitespace-nowrap text-sm"
+                className={cn(
+                  "rounded-lg cursor-pointer whitespace-nowrap text-sm transition-all duration-200",
+                  !value
+                    ? "bg-primary px-2 py-1 text-white font-semibold shadow-md" // Selected state
+                    : "bg-secondary text-gray-600 hover:bg-gray-300" // Default state
+                )}
               >
                 All
               </Badge>
@@ -110,7 +115,7 @@ export const FilterCarousal = ({
       {/* right fade */}
       <div
         className={cn(
-          "absolute right-12 top-0 bottom-0 w-12 z-10 bg-gradient-to-l from-white to-transparent pointer-events-none",
+          "absolute right-12 top-0 bottom-0 w-12 z-10 bg-gradient-to-l from-background to-transparent pointer-events-none",
           current === count && "hidden"
         )}
       />

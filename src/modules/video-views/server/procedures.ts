@@ -7,6 +7,9 @@ import { z } from "zod";
 export const videoViewsRouter = createTRPCRouter({
   //   view would be count as for only logged in user in thes mechanism if i want to include also for non loggin user i can also do that
   //and only if user has viewed the video once and if he/she view again hunderd time count would remain the same
+
+  //mechanish to create like only view is count if user watched  videos for 30sec than constant refresh of browser window does not count as a view
+
   create: ProtectedProcedure.input(
     z.object({ videoId: z.string().uuid() })
   ).mutation(async ({ input, ctx }) => {

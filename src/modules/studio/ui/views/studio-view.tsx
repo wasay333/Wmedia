@@ -1,8 +1,6 @@
 import React from "react";
 import { VideosSection } from "../sections/videos-section";
-// interface StudioViewProps {
-//   categoryId?: string;
-// }
+
 export const StudioView = () => {
   return (
     <div className="pt-2.5 flex flex-col gap-y-6">
