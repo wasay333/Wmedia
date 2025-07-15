@@ -42,15 +42,6 @@ export const StudioSidebar = () => {
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
-            <Separator />
-            <SidebarMenuItem>
-              <SidebarMenuButton tooltip="Analytics" asChild>
-                <Link prefetch href={"/studio/analytics"}>
-                  <LogOutIcon className="size-5" />
-                  <span className="text-sm">Analytics</span>
-                </Link>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
           </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>
